@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculator </h2>
+        <input type="number" id="first-number">
+        <input type="number" id="second-number"><br><br>
+        <button id="submit-add">Addition(+)</button>
+        <button id="submit-sub">Subtraction(-)</button>
+        <button id="submit-mul">Multiplication(x)</button>
+        <button id="submit-div">Division(/)</button>
+        <div id="result"></div>
+    <script>
+        var firstNumber = document.getElementById("first-number")
+        var secondNumber = document.getElementById("second-number")
+        var add = document.getElementById("submit-add")
+        var sub = document.getElementById("submit-sub")
+        var mul = document.getElementById("submit-mul")
+        var div = document.getElementById("submit-div")
+        var result = document.getElementById("result")
+
+
+        add.addEventListener("click", function(){
+            result.innerText = "Result Addition: " + (+parseInt(firstNumber.value) + +parseInt(secondNumber.value));
+        })
+        sub.addEventListener("click", function(){
+            result.innerText = "Result Subtraction: " + (firstNumber.value - secondNumber.value);
+        })
+        mul.addEventListener("click", function(){
+            result.innerText = "Result Multiplication: " + firstNumber.value * secondNumber.value;
+        })
+        div.addEventListener("click", function(){
+            result.innerText = "Result Division: " + firstNumber.value / secondNumber.value;
+        })
+    </script>
+</body>
+</html>
